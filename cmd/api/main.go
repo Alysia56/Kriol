@@ -59,8 +59,6 @@ func main() {
 	// to the healthcheckHandler method (which we will create in a moment).
 	mux := http.NewServeMux()
 	mux.HandleFunc("/v1/healthcheck", app.healthcheckHandler)
-	mux.HandleFunc("/v1/entries", app.createEntryHandler)
-	mux.HandleFunc("/v1/entries", app.showEntryHandler)
 
 	// Declare a HTTP server with some sensible timeout settings, which listens on the
 	// port provided in the config struct and uses the servemux we created above as the

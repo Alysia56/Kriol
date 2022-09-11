@@ -10,9 +10,9 @@ import (
 	"github.com/julienschmidt/httprouter"
 )
 
-//createEntryHandler for the "POST v1/entries" endpoint
+//createEntryHandler for the "POST /v1/entries" endpoint
 func (app *application) createEntryHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Println(w, "this is a test...")
+	fmt.Fprintln(w, "this is a test...")
 
 }
 
